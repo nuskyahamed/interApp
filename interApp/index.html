@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MY VALIDATION PAGE</title>
+	<script type="text/javascript">
+		function validate() 
+		{
+			var uname = document.forms["form"]["username"];
+			
+			var password=document.forms["form"]["password"];
+			
+
+			if(uname.value=="") 
+			{
+				window.alert("Enter username");
+				uname.focus();
+				return false;
+			}
+
+			
+			
+			if(password.value=="") 
+			{
+				window.alert("Enter password");
+				password.focus();
+				return false;
+			}
+			
+			
+			return true;
+		}
+
+
+
+	</script>
+</head>
+<body>
+<form name="form" action="" onsubmit="return validate()" method="post">
+	USER NAME: <input type="text" name="username"> <br><br>
+	
+	PASSWORD : <input type="password" name="pwd"><br><br>
+	
+	<input type="submit" name="button" value="Click">
+</form>
+</body>
+</html>
